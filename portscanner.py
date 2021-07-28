@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Coder By TufekciReal
+# Coder By TufekciReal & FURK4NS
 # 
 #############################
 # Gereksinimler:
