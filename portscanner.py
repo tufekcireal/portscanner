@@ -9,8 +9,8 @@ import socket
 from IPy import IP
 print("""
      ############################    
-    #         TUFEKCİREAL       #
-    #          ^port tarama^   #
+    #     TUFEKCİREAL & FURK4NS #
+    #          PORT SCANNER     #
     ###########################
       """)
 
