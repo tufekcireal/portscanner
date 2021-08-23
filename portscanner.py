@@ -39,9 +39,9 @@ def scan_ports(ipaddress, port):
 
         try:
             banner = get_banner(sock)
-            print (colored('[+] AÇIK PORT: ' , "red" + str(port) + ' : ' + str(banner.decode().strip('\n'))))
+            print('[+] AÇIK PORT: ' , + str(port) + ' : ' + str(banner.decode().strip('\n'))))
         except:
-            print ('[+] AÇIK PORT: ' , "red" + str(port))
+            print('[+] AÇIK PORT: ' , + str(port))
     except:
         pass
 
