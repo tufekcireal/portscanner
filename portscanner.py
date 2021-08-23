@@ -7,16 +7,17 @@
 # pip3 install IPy
 import socket
 from IPy import IP
-print("""
+from termcolor import colored
+print(colored("""
      ############################    
     #     TUFEKCİREAL & FURK4NS #
     #          PORT SCANNER     #
     ###########################
-      """)
+      """ , "green"))
 
 def scan(target):
     converted_ip = check_host(target)
-    print('\n' + '[*] Bir Dakika... Portlar Taranıyor...]: ' + str(target))
+    print( '\n' + "[*] Bir Dakika... Portlar Taranıyor...]: " + str(target))
     for port in range(1,500):    
         scan_ports(converted_ip, port)
 
@@ -38,17 +39,16 @@ def scan_ports(ipaddress, port):
 
         try:
             banner = get_banner(sock)
-            print ('[+] AÇIK PORT: ' + str(port) + ' : ' + str(banner.decode().strip('\n')))
+            print (colored('[+] AÇIK PORT: ' , "red" + str(port) + ' : ' + str(banner.decode().strip('\n'))))
         except:
-            print ('[+] AÇIK PORT: ' + str(port))
+            print ('[+] AÇIK PORT: ' , "red" + str(port))
     except:
         pass
 
 if __name__ == "__main__":
-    targets = input('[+] Taranacak hedefi girin:  ')
+    targets = input(colored('[+] Taranacak hedefi girin:  ' , "green"))
     if ',' in targets:
         for ip_address in targets.split(','):
             scan(ip_address.strip(' '))
     else:
         scan(targets)
-
